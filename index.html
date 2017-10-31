@@ -4,10 +4,29 @@
 	<meta charset="UTF-8">
 	<title>Photo Out</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+	<nav id="nav" class="">
+		<div class="col-xs-2" id="show_menu"><i class="material-icons">menu</i></div>
+		<div class="col-xs-8 center-xs">
+			<h1>GoodWord</h1>
+		</div>
+		<div class="col-xs-2"></div>
+	</nav>
+
+	<div id="menu" class="hide">
+		<ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Opiniones</a></li>
+			<li><a href="#">Artículos</a></li>
+		</ul>
+	</div>
+
 	<div class="container center-xs">
 		<h2>Lo que la gente está diciendo.</h2>
 		<figure class="right">
@@ -36,5 +55,19 @@
 			</div>
 		</figure>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+		var menu = $('#menu');
+		var show = $('#show_menu');
+
+		show.click(function(){
+			menu.toggleClass('hide');
+		});
+
+		$('h1').click(function(){
+			menu.toggleClass('hide');
+		})
+	</script>
 </body>
 </html>
