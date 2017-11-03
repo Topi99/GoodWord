@@ -35,41 +35,20 @@
 	</div>
 
 	<div class="container center-xs">
-		<h2>Lo que la gente está diciendo.</h2>
-		<!--
-		<figure class="right">
-			<div class="row">
-				<div class="col-md-6 col-xs-12 quote">
-					<blockquote>
-						<p>Spotify for Artists gave me the courage to tour Latin America. It was overwhelming to hear fans sing along so far from home.</p>
-					</blockquote>
-				</div>
-				<div class="col-md-6 col-xs-12">
-					<img src="https://spartists-1.global.ssl.fastly.net/i/lucy-rose.jpg?v=c9eb931" alt="">
-				</div>
-			</div>
-		</figure>
-
-		<figure class="left">
-			<div class="row">
-				<div class="col-md-6 col-xs-12 first-md last-xs ">
-					<img src="https://spartists-1.global.ssl.fastly.net/i/jay-prince.jpg?v=c9eb931" alt="">
-				</div>
-				<div class="col-md-6 col-xs-12 quote">
-					<blockquote>
-						<p>Spotify for Artists gave me the courage to tour Latin America. It was overwhelming to hear fans sing along so far from home.</p>
-					</blockquote>
-				</div>
-			</div>
-		</figure>-->
+		<h2>¡Danos tu opinión!</h2>
+		
+		<div id="form" class="row center-xs">
+			<textarea class="col-xs-10" type="text" placeholder="Escribe lo que piensas" id="opinion" ></textarea>
+			<button class="col-xs-3 btn-send btn" id="send">Enviar</button>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-	<script src="/login.js"></script>
 	<script src="/firebase.js"></script>
-	<script src="viewOpinions.js"></script>
+	<script src="/login.js"></script>
+	<script src="/sendOpinion.js"></script>
 	<script>
 		var menu = $('#menu');
 		var show = $('#show_menu');
