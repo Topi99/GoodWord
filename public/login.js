@@ -14,6 +14,7 @@ if(!logged){
 		  Cookies.set('user_image', user.photoURL);
 		  set_text_user_name();
 		  logged = Cookies.set('logged', true);
+		  window.location.href = "/";
 		}).catch(function(error) {
 		  var errorCode = error.code;
 		  var errorMessage = error.message;
