@@ -1,0 +1,66 @@
+[
+	{
+		"id": "sexo",
+		"title":"Sexo *",
+		"questions": [
+			"Mujer",
+			"Hombre"
+		]
+	},
+	{
+		"id": "hablas",
+		"title":"¿Hablas con malas palabras (groserías) con tus compañeros dentro del Tec? *",
+		"questions": [
+			"Nunca",
+			"De vez en cuando",
+			"Sí, mucho"
+		]
+	},
+	{
+		"id": "fines",
+		"title": "¿Con qué fines las dices? *",
+		"questions": [
+			"Para ofender a los demás",
+			"Para reir",
+			"Para verte más cool",
+			"Para encajar con algún grupo",
+			"Otra razón"
+		]
+	},
+	{
+		"id": "ofendes",
+		"title": "¿Te ofendes cuando te hablan con malas palabras? *",
+		"questions": [
+			"No, me da igual",
+			"Solo un poco",
+			"Sí, me ofende mucho"
+		]
+	},
+	{
+		"id":"sientes",
+		"title": "¿Qué sientes al decirlas? *",
+		"questions":[
+			"Nada",
+			"Me siento bien",
+			"Me siento mal"
+		]
+	},
+	{
+		"id":"cuantas",
+		"title":"¿Cuántas malas palabras dices en promedio al día? *",
+		"questions":[
+			"Ninguna",
+			"Alrededor de 10",
+			"Alrededor de 20",
+			"Más de 25"
+		]
+	},
+	{
+		"id":"cuenta",
+		"title":"¿Te das cuenta cuando las dices? *",
+		"questions":[
+			"Sí",
+			"No"
+		]
+	}
+]

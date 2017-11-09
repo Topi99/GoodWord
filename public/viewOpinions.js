@@ -4,8 +4,8 @@ function opinion(opinion, user_name, user_image){
 						<div class="row">
 							<div class="col-md-6 col-xs-12 quote">
 								<blockquote>
-									<p>`+opinion+`</p>
-									<b>`+user_name+`</b>
+									<b>"`+opinion+`"</b >
+									<p  class="smaller">- `+user_name+`</p>
 								</blockquote>
 							</div>
 							<div class="col-md-6 col-xs-12">
