@@ -1,5 +1,5 @@
 var hombres = 0, mujeres = 0;
-var hablas0_h = 0, hablas0_m = 0, hablas1_h = 0, hablas1_m = 0, hablas2_h = 0, hablas2_m = 0;    
+var hablas0_h = 0, hablas0_m = 0, hablas1_h = 0, hablas1_m = 0, hablas2_h = 0, hablas2_m = 0;
 var fines0_h = 0, fines0_m = 0, fines1_h = 0, fines1_m = 0, fines2_h = 0, fines2_m = 0, fines3_h = 0, fines3_m = 0, fines4_h = 0, fines4_m = 0;
 var ofendes0_h = 0, ofendes0_m = 0, ofendes1_h = 0, ofendes1_m = 0, ofendes2_h = 0, ofendes2_m = 0;
 var sientes0_h = 0, sientes0_m = 0, sientes1_h = 0, sientes1_m = 0, sientes2_h = 0, sientes2_m = 0;
@@ -73,18 +73,18 @@ $(document).ready(function(){
 		var ctx_sientes_hm = document.getElementById("chart_sientes_hm").getContext('2d');
 		var ctx_cuantas_hm = document.getElementById("chart_cuantas_hm").getContext('2d');
 		var ctx_cuenta_hm = document.getElementById("chart_cuenta_hm").getContext('2d');
-		
+
 		chartHomMuj(ctx_hm, options_pie, hombres, mujeres);
-		
+
 		var labels = ["Nunca Hombres", "Nunca Mujeres", "De vez en cuando Hombres", "De vez en cuando Mujeres", "Sí, mucho Hombres", "Sí, mucho Mujeres"];
 		var data = [hablas0_h, hablas0_m, hablas1_h, hablas1_m, hablas2_h, hablas2_m]
 		chart(ctx_hablas_hm, options, data, labels);
 
-		data = [fines0_h, fines0_m, fines1_h, fines1_m, fines2_h, fines2_m, fines3_h, fines3_m, fines4_h, fines4_m]; 
+		data = [fines0_h, fines0_m, fines1_h, fines1_m, fines2_h, fines2_m, fines3_h, fines3_m, fines4_h, fines4_m];
 		labels = ["Ofender a los demás H", "Ofender a los demás M", "Reir H", "Reir M", "Verte más cool H", "Verte más cool M", "Encajar con algún grupo H", "Encajar con algún grupo M", "Otra razón H", "Otra razón M",]
 		chart(ctx_fines_hm, options, data, labels);
 
-		data = [ofendes0_h, ofendes0_m, ofendes1_h, ofendes1_m, ofendes2_h, ofendes2_m]; 
+		data = [ofendes0_h, ofendes0_m, ofendes1_h, ofendes1_m, ofendes2_h, ofendes2_m];
 		labels = [
 			"No, me da igual H",
 			"No, me da igual M",
@@ -94,8 +94,8 @@ $(document).ready(function(){
 			"Sí, me ofende mucho M"
 		]
 		chart(ctx_ofendes_hm, options, data, labels);
-		
-		data = [sientes0_h, sientes0_m, sientes1_h, sientes1_m, sientes2_h, sientes2_m]; 
+
+		data = [sientes0_h, sientes0_m, sientes1_h, sientes1_m, sientes2_h, sientes2_m];
 		labels = [
 			"Nada H",
 			"Nada M",
@@ -105,8 +105,8 @@ $(document).ready(function(){
 			"Me siento mal M"
 		]
 		chart(ctx_sientes_hm, options, data, labels);
-		
-		data = [cuantas0_h, cuantas0_m, cuantas1_h, cuantas1_m, cuantas2_h, cuantas2_m, cuantas3_h, cuantas3_m]; 
+
+		data = [cuantas0_h, cuantas0_m, cuantas1_h, cuantas1_m, cuantas2_h, cuantas2_m, cuantas3_h, cuantas3_m];
 		labels = [
 			"Ninguna H",
 			"Ninguna M",
@@ -118,8 +118,8 @@ $(document).ready(function(){
 			"Más de 25 M"
 		]
 		chart(ctx_cuantas_hm, options, data, labels);
-		
-		data = [cuenta0_h, cuenta0_m, cuenta1_h, cuenta1_m]; 
+
+		data = [cuenta0_h, cuenta0_m, cuenta1_h, cuenta1_m];
 		labels = [
 			"Sí H",
 			"Sí M",

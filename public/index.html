@@ -27,14 +27,19 @@
 		<ul>
 			<li><a href="/">Inicio</a></li>
 			<li><a href="/opiniones.html">Opiniones</a></li>
-			<li><a href="#">Artículos</a></li>
+			<li><a href="#articulos">Artículos</a></li>
 		</ul>
 	</div>
 
-	<div id="over">	
+	<div id="over">
 	</div>
 
 	<div class="container center-xs" id="opiniones">
+
+		<div id="articulos" class="row">
+			<h2 class="col-xs-12" >Articulos interesantes.</h2>
+		</div>
+
 		<h2>Lo que la gente está diciendo.
 			<p>
 				<a href="/encuesta.html" class="btn btn-main smaller more-padding">Opina aquí</a>
@@ -64,6 +69,30 @@
 			menu.toggleClass('hide');
 			over.toggleClass('hidden');
 		})
+
+		$(document).ready(function(){
+			firebase.database().ref('articulos/frases-para-reflexionar/').once('value').then(function(snapshot){
+					$.map(snapshot.val(), function(art){
+						$("#articulos").append(
+							`
+								<div class="col-md-4 articule is-white bordered">
+									<img class="art-image" src="`+art.img_src+`">
+									<b class="art-title"><a href="/articulos.html?articulo=`+slugify(art.title)+`">`+art.title+`</a></b>
+								</div>
+							`
+						)
+					});
+			});
+		});
+
+		function slugify(text){
+		  return text.toString().toLowerCase()
+		    .replace(/\s+/g, '-')
+		    .replace(/[^\w\-]+/g, '')
+		    .replace(/\-\-+/g, '-')
+		    .replace(/^-+/, '')
+		    .replace(/-+$/, '');
+		}
 	</script>
 </body>
 </html>
