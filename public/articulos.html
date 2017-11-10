@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Opiniones | GoodWord</title>
+	<title>GoodWord</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,37 +27,23 @@
 		<ul>
 			<li><a href="/">Inicio</a></li>
 			<li><a href="/opiniones.html">Opiniones</a></li>
-			<li><a href="#">Artículos</a></li>
+			<li><a href="#articulos">Artículos</a></li>
 		</ul>
 	</div>
 
 	<div id="over">	
 	</div>
 
-	<div class="container bordered is-white">
-		<h2 class="col-xs-12 center-xs">¡Danos tu opinión!</h2>
+	<div class="container is-white bordered" id="opiniones">
 		
-		<div id="form" class="row col-xs-12">
-
-		</div>
-		<div class="form row col-xs-12" >
-			<div class="fields">
-				<label class="field">8.- ¿Qué crees que piensen los demás de ti cuando hablas con malas palabras? *</label>
-				<div class="field row col-xs-12 middle-xs ">
-					<textarea class="col-xs-12 bordered" type="text" placeholder="Escribe aquí tu respuesta" id="opinion" ></textarea>
-				</div>
-			</div>
-
-			<button class="col-xs-3 btn-send btn" id="send">Enviar</button>
-		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-	<script src="/firebase.js"></script>
 	<script src="/login.js"></script>
-	<script src="/sendOpinion.js"></script>
+	<script src="/firebase.js"></script>
+	<script src="/articulos.js"></script>
 	<script>
 		var menu = $('#menu');
 		var show = $('#show_menu');
@@ -75,25 +61,6 @@
 			over.toggleClass('hidden');
 		})
 
-
-		$.getJSON('/questions.json',function(data){
-			data.map(function(val, i){
-				$('#form').append(field(val, i+1));
-			});
-		})
-
-		function field(val, i){
-			return `<div class="fields row col-xs-10">
-								<label class="field">`+i+`.- `+val.title+`</label>`+
-								val.questions.map(function(field, x){
-									return `
-											<div class="field row middle-xs ">
-												<input type="radio" name="`+val.id+`" value="`+x+`"  id="`+val.id+`-`+x+`"> 
-												<label for="`+val.id+`-`+x+`" >`+field+`</label>
-											</div>`
-								})+`
-							</div>`;
-		}
 
 	</script>
 </body>

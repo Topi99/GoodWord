@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var btn = $('#send');
 		
 		var ref = database.ref('opiniones/');
-		var sexo,hablas,fines,ofendes,sientes,cuantas,cuenta;
+		var sexo = 0,hablas = 0,fines = 0,ofendes = 0,sientes = 0,cuantas = 0,cuenta = 0;
 
 		$('#form').show();
 		btn.click(function(){
@@ -39,6 +39,6 @@ function enviar(ref, sexo, hablas, fines, ofendes, sientes, cuantas, cuenta,opin
 		opinion: opinion,
 		user_name: user_name,
 		user_image: user_image
-	}).then(function(){alert("Enviado.")});
+	}).then(function(){window.location.replace("/opiniones.html");});
 }
 
